@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mWebView = (WebView)findViewById(R.id.webView);
-        
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.setWebChromeClient(new CustomWebClient());
+        mWebView.addJavascriptInterface(new JsPlugin(this), "hello");
+        mWebView.loadUrl("file:///android_asset/index.html");
     }
 }

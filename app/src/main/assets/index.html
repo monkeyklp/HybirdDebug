@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Hello First Html..</title>   
+</head>
+<body>  
+    <a>本地网页</a>  
+    <script>  
+      
+    function funFromjs(){  
+        document.getElementById("helloweb").innerHTML="HelloWebView,i'm from js";  
+    }  
+    var aTag = document.getElementsByTagName('a')[0];  
+    aTag.addEventListener('click', function(){  
+        //调用android本地方法  
+        hello.test("hello world!");
+        return false;  
+    }, false);  
+    </script>  
+    <p></p>  
+    <div id="helloweb">   
+  
+    </div>  
+</body>
+</html>
